@@ -84,9 +84,3 @@ npm run web
 
 ---
 
-## 📄 Submission Guidelines
-
-When submitting your hackathon project:
-1. **GitHub Repository**: Fork the template repo [8xsocial/template-mobile](https://github.com/8xsocial/template-mobile), push your code, and submit the link.
-2. **Star the Repo**: ⭐ Star the repository on GitHub for priority grading.
-3. **Demo Video**: Create a brief screen recording demonstrating the core game loop (Room creation -> Clues -> Voting -> Reveal -> Scoreboard).
