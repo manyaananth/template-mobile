@@ -1,56 +1,92 @@
-# Welcome to your Expo app 👋
+# 🕵️‍♂️ Imposter (Social Deduction Party Game)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A premium, real-time multiplayer social deduction party game inspired by the viral hit *Fakeit*. The game can be played locally (in the same room) or over the internet, and is built to run flawlessly on both **Web** and **Mobile** using **React Native / Expo** and **Firebase Realtime Database**.
 
-## Get started
+---
 
-1. Install dependencies
+## 🎮 Game Rules & Concept
 
-   ```bash
-   npm install
-   ```
+1. **Setup**: A host creates a room, selects a category, sets the timer, and shares the **Room Code** with 4 to 8 players.
+2. **Role Assignment**: Once the game starts:
+   - Most players are assigned the **Secret Word** (e.g., *Airplane*).
+   - One player is assigned the role of the **Imposter** (who is shown *"You are the Imposter. You do not know the word. Try to blend in!"*).
+3. **Clue Phase**: Players take turns writing a single-word clue.
+   - **Crucial Rule**: The turn order is randomized, but the **Imposter never goes first** (to prevent them from being immediately exposed without any context).
+4. **Discussion**: A countdown timer fires, and players discuss who they think the Imposter is.
+5. **Voting**: Players vote simultaneously on who they believe is the Imposter.
+6. **Reveal & Guessing**:
+   - If the Imposter is **not caught** (escapes), the Imposter wins bonus points!
+   - If the Imposter **is caught**, they get one last **20-second chance** to guess the Secret Word from a list of options. If they guess correctly, they steal the victory!
+7. **Scoreboard**: Scores are tracked dynamically across multiple rounds, complete with premium animations and a confetti celebration.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features Built
 
-In the output, you'll find options to open the app in a
+- **Cross-Platform Design**: Responsive, modern dark/light themed UI that scales dynamically on Web and Mobile using relative layout heights and responsive dimensions.
+- **Fair-Play Game Logic**:
+  - **Fisher-Yates Shuffle**: True random assignment of roles every round to prevent repetitive role selection.
+  - **Imposter Safety**: Guarantees a non-imposter always goes first in turn order.
+- **Dynamic Score System**:
+  - **Imposter Escapes (Not Caught)**: `+200 pts` to the Imposter.
+  - **Imposter Caught + Guesses Secret Word**: `+300 pts` to the Imposter.
+  - **Players Win (Imposter Caught & Fails Guess)**: `+100 pts` to each non-imposter.
+  - Uses atomic transactions on Firebase database nodes to prevent double-scoring.
+- **Live Real-time Sync**: Synced room states, lobby user lists, turns, live voting, and round-over statuses powered by Firebase Realtime Database.
+- **6 Category Packs**: General, Family, Adult, Movies & TV, Sports, and Food & Drinks.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Tech Stack
 
-## Get a fresh project
+- **Framework**: Expo / React Native (supporting iOS, Android, and Web)
+- **Real-time Engine**: Firebase Realtime Database (RTDB)
+- **Styling & Assets**: Custom React Native stylesheet design, `expo-linear-gradient` for premium aesthetics, and responsive layout calculations.
 
-When you're ready, run:
+---
 
+## ⚙️ Installation & Setup
+
+### 1. Clone & Install Dependencies
+First, fork and clone your repository, then run:
 ```bash
-npm run reset-project
+cd imposter-game
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Configure Environment Variables
+Create a `.env` file in the root directory and add your Firebase configurations (see `.env.example`):
 
-### Other setup steps
+```env
+EXPO_PUBLIC_FIREBASE_API_KEY=your_api_key
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain.firebaseapp.com
+EXPO_PUBLIC_FIREBASE_DATABASE_URL=https://your_database_url.firebaseio.com
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+EXPO_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+> [!NOTE]
+> Make sure to enable **Anonymous Authentication** (or Email/Password) and **Realtime Database** with read/write rules enabled in your Firebase console.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Running the App
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Start the Development Server
+```bash
+npm run dev
+# OR for web-specific execution
+npm run web
+```
 
-## Join the community
+- **Testing Web**: Open `http://localhost:8081` in your browser. You can open multiple tabs (incognito or different browsers) to test multiplayer locally.
+- **Testing Mobile**: Install the **Expo Go** app on your phone and scan the QR code displayed in the terminal.
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 Submission Guidelines
+
+When submitting your hackathon project:
+1. **GitHub Repository**: Fork the template repo [8xsocial/template-mobile](https://github.com/8xsocial/template-mobile), push your code, and submit the link.
+2. **Star the Repo**: ⭐ Star the repository on GitHub for priority grading.
+3. **Demo Video**: Create a brief screen recording demonstrating the core game loop (Room creation -> Clues -> Voting -> Reveal -> Scoreboard).

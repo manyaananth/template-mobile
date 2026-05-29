@@ -1,0 +1,52 @@
+{
+    "General": [
+        "Swimming Pool", "Airport", "Pizza", "Library", "Hospital", "Circus", "Beach", "Museum",
+        "Supermarket", "School", "Cinema", "Gym", "Bank", "Hotel", "Restaurant", "Amusement Park",
+        "Subway", "Zoo", "Spa", "Casino", "Post Office", "Police Station", "Fire Station",
+        "Pharmacy", "Barbershop", "Laundromat", "Gas Station", "Parking Lot", "Bus Stop",
+        "Train Station", "Harbor", "Lighthouse", "Prison", "University", "Courthouse"
+    ],
+    "Family": [
+        "Playground", "Ice Cream Shop", "Toy Store", "Park", "Birthday Party", "Christmas Tree",
+        "Camping", "Picnic", "Aquarium", "Farm", "Petting Zoo", "Treehouse", "Carnival",
+        "Bowling Alley", "Mini Golf", "Waterpark", "Cookie", "Puppet Show", "Storytime",
+        "Sandbox", "Lego", "Board Game Night", "Easter Egg Hunt", "Balloon Animal",
+        "Kite Flying", "Pillow Fort", "Hide and Seek", "Lemonade Stand", "Bake Sale",
+        "School Play", "Sleepover", "Swimming Lessons", "Santa Claus", "Teddy Bear"
+    ],
+    "Adult": [
+        "Nightclub", "Brewery", "Wine Tasting", "Comedy Club", "Poker Night", "Rooftop Bar",
+        "Tattoo Parlor", "Karaoke Bar", "Escape Room", "Murder Mystery", "Speed Dating",
+        "Hot Tub", "Cigar Lounge", "Casino Night", "Bachelorette Party", "Jazz Bar",
+        "Hookah Lounge", "Yacht", "Private Chef Dinner", "Speakeasy", "Strip Poker",
+        "Whisky Tasting", "Paintball", "Go-Kart Racing", "Axe Throwing", "Pub Crawl",
+        "Open Mic Night", "Masquerade Ball", "Skinny Dipping", "Truth or Dare",
+        "Spin the Bottle", "After Party", "Brunch", "Burlesque Show"
+    ],
+    "Movies & TV": [
+        "Superhero", "Zombie Apocalypse", "Time Machine", "Haunted House", "Spaceship",
+        "Dragon", "Pirate Ship", "Secret Agent", "Heist", "Gladiator Arena",
+        "Vampire Castle", "Wizard School", "Reality TV Show", "Talk Show", "Game Show",
+        "Documentary", "Soap Opera", "Courtroom Drama", "Space Station", "Underwater Base",
+        "Dystopia", "Wild West Saloon", "Roman Empire", "Alien Invasion", "Dinosaurs",
+        "Fairy Tale", "Apocalypse Bunker", "Submarine", "Jungle Expedition", "Time Loop"
+    ],
+    "Sports": [
+        "Soccer Field", "Basketball Court", "Baseball Diamond", "Tennis Court", "Swimming Pool",
+        "Boxing Ring", "Golf Course", "Ski Slope", "Surfing Beach", "Running Track",
+        "Cycling Race", "Archery Range", "Fencing Duel", "Weightlifting Gym", "Yoga Studio",
+        "Rock Climbing Wall", "Skatepark", "Ice Rink", "Bowling Alley", "Billiards Hall",
+        "Martial Arts Dojo", "Horse Racing Track", "Formula 1 Circuit", "Rugby Pitch",
+        "Volleyball Beach", "Table Tennis", "Badminton Court", "Polo Field", "Diving Board",
+        "Triathlon"
+    ],
+    "Food & Drinks": [
+        "Sushi Restaurant", "Taco Stand", "Burger Joint", "Italian Pizzeria", "French Bakery",
+        "Indian Curry House", "Chinese Dim Sum", "BBQ Smokehouse", "Ice Cream Parlor",
+        "Vegan Café", "Ramen Shop", "Food Truck", "Farmers Market", "Steakhouse",
+        "Seafood Shack", "Donut Shop", "Coffee Roastery", "Cocktail Bar", "Juice Bar",
+        "Chocolate Factory", "Cheese Shop", "Winery", "Microbrewery", "Tea House",
+        "Hot Dog Stand", "Waffle House", "Pancake Breakfast", "Street Food Market",
+        "Cooking Class", "Buffet"
+    ]
+}
